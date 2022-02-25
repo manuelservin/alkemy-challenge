@@ -22,7 +22,7 @@ const SearchForm = ({ setLoading, setDishes }) => {
                 setLoading(false);
                 return Swal.fire("Error!", "The dish does not exist", "error");
               }
-              console.log(res);
+              localStorage.setItem("lastSearch", JSON.stringify(res));
               setLoading(false);
               setDishes(res);
             })
