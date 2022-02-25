@@ -10,7 +10,6 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/** Public Routes */}
         <Route
           path="/login"
           element={
@@ -19,7 +18,6 @@ const AppRouter = () => {
             </PublicRoutes>
           }
         />
-        {/** Private Routes */}
         <Route
           path="/*"
           element={
