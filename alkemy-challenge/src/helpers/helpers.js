@@ -15,15 +15,17 @@ export const startLogin = async (data) => {
 
 export const searchDish = async (values) => {
   const { dish, vegan } = values;
+  console.log(values);
   if (vegan) {
     const response = await axios
       .get(
         `${config.baseUrl}/recipes/complexSearch?query=${dish}&addRecipeInformation=true&diet=vegan&apiKey=${config.apiKey}`
       )
       .then((res) => {
+        console.log(res.data.results);
         return res.data.results;
       })
-      .catch((err) => Swal.fire("Error!", err, "error"));
+      .catch((err) => Swal.fire("Errorh!", err, "error"));
     return response;
   }
   const response = await axios
@@ -33,7 +35,7 @@ export const searchDish = async (values) => {
     .then((res) => {
       return res.data.results;
     })
-    .catch((err) => Swal.fire("Error!", err, "error"));
+    .catch((err) => Swal.fire("Errorj!", err, "error"));
 
   return response;
 };

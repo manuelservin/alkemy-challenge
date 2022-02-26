@@ -6,6 +6,7 @@ export const MenuContext = createContext([]);
 export const MenuContextProvider = ({ children }) => {
   let menu = JSON.parse(localStorage.getItem("menu")) || [];
   const [dishList, setDishList] = useState(menu);
+  const [lastSearch, setLastSearch] = useState([]);
 
   const addNewDish = (dish) => {
     const alreadyExists = dishList.some((item) => item.id === dish.id);
@@ -68,6 +69,8 @@ export const MenuContextProvider = ({ children }) => {
         addNewDish,
         deleteDish,
         dishList,
+        lastSearch,
+        setLastSearch,
       }}
     >
       {children}
