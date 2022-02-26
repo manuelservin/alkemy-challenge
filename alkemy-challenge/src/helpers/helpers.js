@@ -56,3 +56,11 @@ export const getAverage = (array, value) => {
   console.log(total);
   return total.toFixed();
 };
+
+export const getDishById = async (id) => {
+  const response = await axios.get(
+    `${config.baseUrl}/recipes/${id}/information?includeNutrition=false&apiKey=${config.apiKey}`
+  );
+
+  return response.data;
+};
