@@ -37,3 +37,20 @@ export const searchDish = async (values) => {
 
   return response;
 };
+
+export const getTotal = (array, value) => {
+  if (value === 0) return;
+
+  let total = array.map((v) => v[value]).reduce((a, b) => a + b, 0);
+  return total.toFixed(2);
+};
+export const getAverage = (array, value) => {
+  console.log(array);
+  console.log(value);
+  if (value === "") return;
+  let total =
+    array.map((v) => v[value]).reduce((prev, curr) => (curr += prev)) /
+    array.length;
+  console.log(total);
+  return total.toFixed();
+};

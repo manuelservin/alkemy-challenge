@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import DishItem from "../components/DishItem";
 import SearchForm from "../components/SearchForm";
 
@@ -27,7 +27,7 @@ const Search = () => {
           {dishes &&
             dishes.map((dish) => (
               <div className="small ">
-                <li key={dish.id} {...dish} />
+                <DishItem key={dish.id} {...dish} dish={dish} />
               </div>
             ))}
         </div>
