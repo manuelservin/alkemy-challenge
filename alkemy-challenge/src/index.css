@@ -1,5 +1,19 @@
+:root {
+  --bg-container: #212121;
+  --bg-items: #2d2d2d;
+  --font-color: #fff;
+  --bg-button: #ffe598;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  color: var(--font-color);
+}
+
+.container {
+  background-color: var(--bg-container);
 }

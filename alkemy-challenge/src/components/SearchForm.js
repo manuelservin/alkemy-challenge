@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import React from "react";
 import Swal from "sweetalert2";
 import { searchDish } from "../helpers/helpers";
+import "../styles/searchForm.css";
 
 const SearchForm = ({ setLoading, setDishes }) => {
   return (
@@ -40,11 +41,7 @@ const SearchForm = ({ setLoading, setDishes }) => {
                 className="form-control"
               />
               <div className="input-group-append">
-                <button
-                  className="btn orange"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
+                <button className="btn" type="submit" disabled={isSubmitting}>
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
               </div>

@@ -1,0 +1,85 @@
+.clickeable {
+  text-decoration: none;
+  color: var(--font-color);
+}
+.clickeable:hover {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.card {
+  margin-top: 2em;
+  padding: 1.5em 0.5em 0.5em;
+  border-radius: 2em;
+  text-align: center;
+  background-color: var(--bg-items);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 65%;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+.card .card-title {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+.card .btn {
+  border-radius: 2em;
+  background-color: teal;
+  color: #ffffff;
+  padding: 0.5em 1.5em;
+}
+.card .btn:hover {
+  background-color: rgba(0, 128, 128, 0.7);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.info-text {
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+}
+.icon {
+  color: var(--primary);
+  margin-right: 7px;
+}
+
+.card-footer {
+  display: flex;
+  width: 100%;
+  border: none;
+  justify-content: space-between;
+}
+.card-footer span {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.cta {
+  border-radius: 50%;
+  background-color: var(--bg-button);
+  border: none;
+  padding: 0.4em;
+  transition: background-color 0.3s ease;
+}
+.cta svg {
+  color: #212121 !important;
+  margin: 0;
+}
+
+.cta:hover {
+  background-color: rgba(209, 175, 5, 0.7);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

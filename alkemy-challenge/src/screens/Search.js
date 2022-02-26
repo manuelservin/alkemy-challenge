@@ -9,7 +9,7 @@ const Search = () => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <>
+    <div className="container ">
       <div className="row justify-content-center m-0">
         <SearchForm setDishes={setDishes} setLoading={setLoading} />
       </div>
@@ -26,13 +26,13 @@ const Search = () => {
         <div className="my-5  list ">
           {dishes &&
             dishes.map((dish) => (
-              <div className="small ">
-                <DishItem key={dish.id} {...dish} dish={dish} />
+              <div className="small" key={dish.id}>
+                <DishItem {...dish} dish={dish} />
               </div>
             ))}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

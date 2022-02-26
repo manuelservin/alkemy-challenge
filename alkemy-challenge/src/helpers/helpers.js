@@ -59,7 +59,7 @@ export const getAverage = (array, value) => {
 
 export const getDishById = async (id) => {
   const response = await axios.get(
-    `${config.baseUrl}/recipes/${id}/information?includeNutrition=false&apiKey=${config.apiKey}`
+    `${config.baseUrl}/recipes/${id}/information?includeNutrition=true&apiKey=${config.apiKey}`
   );
 
   return response.data;
