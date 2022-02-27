@@ -10,6 +10,10 @@ const Search = () => {
 
   return (
     <div className="container ">
+      <p className="text-container">
+        Find The <b>Best</b> <br />
+        <b>Food</b> Right Here
+      </p>
       <div className="row justify-content-center m-0">
         <SearchForm setDishes={setDishes} setLoading={setLoading} />
       </div>
@@ -23,7 +27,7 @@ const Search = () => {
           </div>
         </div>
       ) : (
-        <div className="my-5  list ">
+        <div className=" my-4 list ">
           {dishes &&
             dishes.map((dish) => (
               <div className="small" key={dish.id}>

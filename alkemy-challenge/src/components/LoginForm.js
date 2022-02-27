@@ -10,45 +10,54 @@ const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   return (
     <div>
-      {loading && <h3> Loading...</h3>}
-      <Formik
-        initialValues={{ email: "challenge@alkemy.org", password: "react" }}
-        validationSchema={Yup.object({
-          email: Yup.string().email("Email invalido").required("Requerido"),
-          password: Yup.string()
-            .min(2, "Debe contener al menos 2 caracteres")
-            .required("Requerido"),
-        })}
-        onSubmit={(values, { setSubmitting }) => {
-          setLoading(true);
-          startLogin(values).then(({ token }) => {
-            dispatch({
-              type: types.login,
-              payload: { token },
+      {loading ? (
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden"></span>
+        </div>
+      ) : (
+        <Formik
+          initialValues={{ email: "challenge@alkemy.org", password: "react" }}
+          validationSchema={Yup.object({
+            email: Yup.string().email("Email invalido").required("Requerido"),
+            password: Yup.string()
+              .min(2, "Debe contener al menos 2 caracteres")
+              .required("Requerido"),
+          })}
+          onSubmit={(values, { setSubmitting }) => {
+            setLoading(true);
+            startLogin(values).then(({ token }) => {
+              dispatch({
+                type: types.login,
+                payload: { token },
+              });
             });
-          });
-          setSubmitting(false);
-        }}
-      >
-        {({ isSubmitting }) => (
-          <>
-            <div className="form">
-              <Form className="col">
+            setSubmitting(false);
+          }}
+        >
+          {({ isSubmitting }) => (
+            <>
+              <Form className="form">
                 <h5 className="form-title">Login</h5>
                 <div className="form-content">
-                  <div className="form-field mb-2">
-                    <Field name="email" type="text" placeHolder="Email" />
+                  <div className="form-field mb-3 mt-4">
+                    <Field
+                      name="email"
+                      type="text"
+                      placeHolder="Email.."
+                      className="form-control lg"
+                    />
                     <ErrorMessage
                       name="email"
                       className="error"
                       component="div"
                     />
                   </div>
-                  <div className="form-field mt-3">
+                  <div className="form-field mt-4">
                     <Field
                       name="password"
                       type="password"
                       placeholder="Password.."
+                      className="form-control lg"
                     />
                     <ErrorMessage
                       name="password"
@@ -59,18 +68,17 @@ const LoginForm = () => {
 
                   <button
                     type="submit"
-                    style={{ width: "70%" }}
-                    className=" btn orange mt-4 mb-3"
+                    className="cta__resume mt-4 mb-3"
                     disabled={isSubmitting}
                   >
                     Submit
                   </button>
                 </div>
               </Form>
-            </div>
-          </>
-        )}
-      </Formik>
+            </>
+          )}
+        </Formik>
+      )}
     </div>
   );
 };

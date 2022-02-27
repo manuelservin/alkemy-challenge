@@ -5,6 +5,8 @@ import DishList from "../components/DishList";
 import { MenuContext } from "../context/menu/MenuContextProvider";
 import { getAverage, getTotal } from "../helpers/helpers";
 
+import "../styles/Home.css";
+
 const Home = () => {
   const { dishList } = useContext(MenuContext);
   console.log(dishList);
@@ -44,20 +46,24 @@ const Home = () => {
         <div className="row  full mt-5  empty">
           <h2> Your menu is empty</h2>
           <h3>Meet our options </h3>
-          <Link to="/search" className="btn orange">
+          <Link to="/search" className="btn__home">
             Explore dishes...
           </Link>
         </div>
       )}
 
-      <DishList dishList={dishList} />
-
       {dishList && dishList.length !== 0 && (
-        <div className="row justify-content-center mb-5 full ">
-          <button className="btn orange " onClick={handleClick}>
-            Resume
-          </button>
-        </div>
+        <>
+          <p className="text-container">
+            Your <b>Menu</b> Right Here
+          </p>
+          <DishList dishList={dishList} />
+          <div className=" resume mb-5">
+            <button className="cta__resume" onClick={handleClick}>
+              Resume
+            </button>
+          </div>
+        </>
       )}
     </div>
   );

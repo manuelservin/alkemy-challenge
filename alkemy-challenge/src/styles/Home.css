@@ -1,0 +1,40 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn__home {
+  background-color: var(--bg-button);
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 450;
+}
+
+.btn__home:hover {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.8;
+}
+
+.resume {
+  display: flex;
+  width: 65%;
+  margin: 15px auto 0 auto;
+}
+
+.cta__resume {
+  padding: 0.3em 0.5em;
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--bg-button);
+  transition: all 0.3 ease;
+  border: none;
+}
+
+.cta__resume:hover {
+  opacity: 0.8;
+}

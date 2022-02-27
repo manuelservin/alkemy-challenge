@@ -2,6 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import React from "react";
 import Swal from "sweetalert2";
+import { SearchOutline } from "@styled-icons/evaicons-outline/SearchOutline";
 import { searchDish } from "../helpers/helpers";
 import "../styles/searchForm.css";
 
@@ -12,8 +13,8 @@ const SearchForm = ({ setLoading, setDishes }) => {
         initialValues={{ dish: "", vegan: false }}
         validationSchema={Yup.object({
           dish: Yup.string()
-            .min(3, "it should have at least 2 characters")
-            .required("it should have at least 2 characters"),
+            .min(3, "It should have at least 2 characters")
+            .required("It should have at least 2 characters"),
         })}
         onSubmit={(values, { setSubmitting }) => {
           setLoading(true);
@@ -37,20 +38,21 @@ const SearchForm = ({ setLoading, setDishes }) => {
               <Field
                 name="dish"
                 type="text"
-                placeholder="Enter a dish.."
+                autoComplete="off"
+                placeholder="Search your favourite food"
                 className="form-control"
               />
               <div className="input-group-append">
                 <button className="btn" type="submit" disabled={isSubmitting}>
-                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <SearchOutline size={20} color="#fff" />
                 </button>
               </div>
             </div>
-            <label className="checkBox">
+            <ErrorMessage className="error" name="dish" component="div" />
+            <label className="checkBox mt-2">
               <Field name="vegan" type="checkbox" />
               Vegan
             </label>
-            <ErrorMessage className="error" name="dish" component="div" />
           </Form>
         )}
       </Formik>

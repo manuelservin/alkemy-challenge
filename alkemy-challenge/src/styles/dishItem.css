@@ -8,7 +8,6 @@
 }
 
 .card {
-  margin-top: 2em;
   padding: 1.5em 0.5em 0.5em;
   border-radius: 2em;
   text-align: center;
@@ -53,6 +52,15 @@
 .icon {
   color: var(--primary);
   margin-right: 7px;
+}
+.high {
+  color: green;
+}
+.medium {
+  color: yellow;
+}
+.low {
+  color: red;
 }
 
 .card-footer {

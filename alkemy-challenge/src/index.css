@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 :root {
   --bg-container: #212121;
   --bg-items: #2d2d2d;
@@ -12,8 +14,29 @@
 }
 body {
   color: var(--font-color);
+  background-color: var(--bg-container);
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
   background-color: var(--bg-container);
+  z-index: 1;
+}
+.swal2-container {
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+}
+
+.swal2-popup {
+  background-color: var(--bg-items) !important;
+  color: #fff !important;
+}
+
+.swal2-confirm {
+  background-color: var(--bg-button) !important;
+  color: #000 !important;
+  border: none;
+  border-radius: 10px;
 }

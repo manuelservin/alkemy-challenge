@@ -3,10 +3,10 @@ import DishItem from "./DishItem";
 
 const DishList = ({ dishList }) => {
   return (
-    <div>
+    <div className="list">
       {dishList &&
         dishList.map((dish) => (
-          <DishItem key={dish.id} dish={dish} {...dish} />
+          <DishItem key={dish.id} {...dish} dish={dish} />
         ))}
     </div>
   );
