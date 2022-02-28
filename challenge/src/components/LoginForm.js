@@ -21,16 +21,21 @@ const LoginForm = () => {
       ) : (
         <div className="form">
           <Formik
-            initialValues={{ email: "challenge@alkemy.org", password: "react" }}
+            initialValues={{ email: "", password: "" }}
             validationSchema={Yup.object({
-              email: Yup.string().email("Email invalido").required("Requerido"),
+              email: Yup.string().email("Invalid email").required("Required"),
               password: Yup.string()
-                .min(2, "Debe contener al menos 2 caracteres")
-                .required("Requerido"),
+                .min(2, "should have at least 2 characters")
+                .required("Required"),
             })}
             onSubmit={(values, { setSubmitting }) => {
               setLoading(true);
               startLogin(values).then(({ token }) => {
+                if (!token) {
+                  setLoading(false);
+
+                  return;
+                }
                 dispatch({
                   type: types.login,
                   payload: { token },
