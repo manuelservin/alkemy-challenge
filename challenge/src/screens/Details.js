@@ -41,7 +41,7 @@ const Details = ({ value }) => {
                   <img
                     src={dish.image}
                     className="img-fluid rounded-start"
-                    alt="..."
+                    alt={dish.title}
                   />
                 </div>
                 <div className="col-md-7">

@@ -15,7 +15,7 @@ const DishItem = ({ title, servings, pricePerServing, dish }) => {
     <>
       <div className="card" style={{ width: "18rem" }}>
         <Link to={`/search/${dish.id}`} className="clickeable">
-          <img className="card-img-top" src={dish.image} alt="Card image cap" />
+          <img className="card-img-top" src={dish.image} alt={title} />
 
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
