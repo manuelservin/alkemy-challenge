@@ -22,7 +22,6 @@ export const searchDish = async (values) => {
         `${config.baseUrl}/recipes/complexSearch?query=${dish}&addRecipeInformation=true&diet=vegan&apiKey=${config.apiKey}`
       )
       .then((res) => {
-        console.log(res.data.results);
         return res.data.results;
       })
       .catch((err) => Swal.fire("Errorh!", err, "error"));
@@ -47,13 +46,10 @@ export const getTotal = (array, value) => {
   return total.toFixed(2);
 };
 export const getAverage = (array, value) => {
-  console.log(array);
-  console.log(value);
   if (value === "") return;
   let total =
     array.map((v) => v[value]).reduce((prev, curr) => (curr += prev)) /
     array.length;
-  console.log(total);
   return total.toFixed();
 };
 
