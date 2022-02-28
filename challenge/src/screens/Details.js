@@ -10,7 +10,6 @@ import { MenuContext } from "../context/menu/MenuContextProvider";
 import "../styles/Details.css";
 const Details = ({ value }) => {
   const { id } = useParams();
-  console.log(id);
   const [dish, setDish] = useState();
   const [loading, setLoading] = useState(false);
   const { addNewDish, deleteDish, dishList } = useContext(MenuContext);
@@ -25,14 +24,12 @@ const Details = ({ value }) => {
       })
       .catch((error) => console.log(error));
   }, [id]);
-
-  console.log(dish);
   return (
     <div className=" container box">
       {loading ? (
         <div className="loading">
-          <div class="spinner-border" role="status">
-            <span class="visually-hidden"></span>
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden"></span>
           </div>
         </div>
       ) : (
@@ -93,7 +90,9 @@ const Details = ({ value }) => {
                     <div className="ingredients__items">
                       {dish.extendedIngredients &&
                         dish.extendedIngredients.map((ing) => (
-                          <span className="item">{ing.name}</span>
+                          <span className="item" key={ing.id}>
+                            {ing.name}
+                          </span>
                         ))}
                     </div>
                   </div>

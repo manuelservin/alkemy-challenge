@@ -4,7 +4,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { AuthContext } from "../context/auth/AuthContext";
 import { startLogin } from "../helpers/helpers";
 import { types } from "../types/types";
-const init = false;
 const LoginForm = () => {
   const { dispatch } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
@@ -49,7 +48,7 @@ const LoginForm = () => {
                       <Field
                         name="email"
                         type="text"
-                        placeHolder="Email.."
+                        placeholder="Email.."
                         className="form-control lg"
                       />
                       <ErrorMessage

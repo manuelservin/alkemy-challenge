@@ -15,7 +15,6 @@ export const startLogin = async (data) => {
 
 export const searchDish = async (values) => {
   const { dish, vegan } = values;
-  console.log(values);
   if (vegan) {
     const response = await axios
       .get(

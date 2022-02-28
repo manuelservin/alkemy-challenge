@@ -9,7 +9,6 @@ import "../styles/Home.css";
 
 const Home = () => {
   const { dishList } = useContext(MenuContext);
-  console.log(dishList);
 
   const [price, setPrice] = useState(0);
   const [healthScore, setHealthScore] = useState(0);
