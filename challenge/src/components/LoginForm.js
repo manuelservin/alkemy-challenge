@@ -42,7 +42,7 @@ const LoginForm = () => {
             {({ isSubmitting }) => (
               <>
                 <Form>
-                  <h5 className="form-title">Login</h5>
+                  <h1 className="form-title">Login</h1>
                   <div className="form-content">
                     <div className="form-field mb-3 mt-4">
                       <Field
@@ -74,6 +74,7 @@ const LoginForm = () => {
                     <button
                       type="submit"
                       className="cta__resume mt-4 mb-3"
+                      id="form-button"
                       disabled={isSubmitting}
                     >
                       Submit

@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in AppRouter should show the home screen if the user is authenticated 1`] = `
+Array [
+  Array [
+    <div
+      className="navbar"
+    >
+      <button
+        className="arrow"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="StyledIconBase-ea9ulj-0 bsimgx"
+          fill="currentColor"
+          focusable="false"
+          height={35}
+          viewBox="0 0 24 24"
+          width={35}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            data-name="Layer 2"
+          >
+            <path
+              d="M13.83 19a1 1 0 01-.78-.37l-4.83-6a1 1 0 010-1.27l5-6a1 1 0 011.54 1.28L10.29 12l4.32 5.36a1 1 0 01-.78 1.64z"
+              data-name="arrow-ios-back"
+            />
+          </g>
+        </svg>
+      </button>
+      <button
+        className="menu-bars"
+        onClick={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="StyledIconBase-ea9ulj-0 bsimgx"
+          fill="currentColor"
+          focusable="false"
+          height={35}
+          viewBox="0 0 16 16"
+          width={35}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 1 1 0 1.5H1.75A.75.75 0 0 1 1 2.75zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 1 1 0 1.5H1.75A.75.75 0 0 1 1 7.75zM1.75 12a.75.75 0 1 0 0 1.5h12.5a.75.75 0 1 0 0-1.5H1.75z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>,
+    <nav
+      className="nav-menu"
+    >
+      <ul
+        className="nav-menu-items"
+        onClick={[Function]}
+      >
+        <li
+          className="navbar-toggle"
+        >
+          <button
+            className="menu-bars"
+            to="#"
+          >
+            <svg
+              aria-hidden="true"
+              className="StyledIconBase-ea9ulj-0 bsimgx"
+              fill="currentColor"
+              focusable="false"
+              height={35}
+              viewBox="0 0 20 20"
+              width={35}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.348 14.849a1.2 1.2 0 01-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 11-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 111.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 111.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 010 1.698z"
+              />
+            </svg>
+          </button>
+        </li>
+        <li
+          className="nav-text"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="nav-text"
+        >
+          <a
+            href="/search"
+            onClick={[Function]}
+          >
+            Search
+          </a>
+        </li>
+        <li
+          className="nav-text"
+        >
+          <button
+            className="cta__resume logout"
+            onClick={[Function]}
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    </nav>,
+  ],
+  <div
+    className="container"
+  >
+    <div
+      className="row  full mt-5  empty"
+    >
+      <h2>
+         Your menu is empty
+      </h2>
+      <h3>
+        Meet our options 
+      </h3>
+      <a
+        className="btn__home"
+        href="/search"
+        onClick={[Function]}
+      >
+        Explore dishes...
+      </a>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Tests in AppRouter should show the login screen if the user is not authenticated  1`] = `
+<div
+  className=" login"
+>
+  <div>
+    <div
+      className="form"
+    >
+      <form
+        action="#"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <h1
+          className="form-title"
+        >
+          Login
+        </h1>
+        <div
+          className="form-content"
+        >
+          <div
+            className="form-field mb-3 mt-4"
+          >
+            <input
+              className="form-control lg"
+              name="email"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Email.."
+              type="text"
+              value="challenge@alkemy.org"
+            />
+          </div>
+          <div
+            className="form-field mt-4"
+          >
+            <input
+              className="form-control lg"
+              name="password"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Password.."
+              type="password"
+              value="react"
+            />
+          </div>
+          <button
+            className="cta__resume mt-4 mb-3"
+            disabled={false}
+            id="form-button"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+      <button
+        className="cta__resume  mb-3 "
+        onClick={[Function]}
+      >
+        Enter as guest
+      </button>
+    </div>
+  </div>
+</div>
+`;
